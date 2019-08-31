@@ -6,4 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".LeaderBoardActivity">
 
+    <include
+        android:id="@+id/toolbarLeaderboard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar_leaderboard"/>
+
+    <RelativeLayout
+        android:id="@+id/leaderboardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLeaderboard">
+
+        <TextView
+            android:id="@+id/positionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Pos"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/userHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="User"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:text="Point"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/myAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboardHeader">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/myAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMyBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/myPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"/>
+
+        <ImageView
+            android:id="@+id/myPhotoAccount"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/myPosition"
+            android:src="@drawable/brown_rounded" />
+
+        <TextView
+            android:id="@+id/tvMyNameAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name User"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/myPhotoAccount"
+            android:textStyle="normal"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvMyUserameAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="@color/colorGray"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/tvMyNameAccount"
+            android:textStyle="normal"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvMyPointAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20122"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:textStyle="normal"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,8 @@
         </activity>
 
         <activity android:name=".LeaderBoardActivity" />
-        <activity android:name=".DetailReportActivity"></activity>
+        <activity android:name=".DetailReportActivity" />
+        <activity android:name=".AddReportActivity"></activity>
     </application>
 
 </manifest>
