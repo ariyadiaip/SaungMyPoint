@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "460704268642",
+    "firebase_url": "https://saungmypoint.firebaseio.com",
+    "project_id": "saungmypoint",
+    "storage_bucket": "saungmypoint.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460704268642:android:ad67f3271b256519",
+        "android_client_info": {
+          "package_name": "id.sch.bdg.smkn4.pkk.saung_mypoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460704268642-timo7q230kiq7qpbhq237p1gjroc60s4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.bdg.smkn4.pkk.saung_mypoint",
+            "certificate_hash": "ef6da0084740da345bf423324a5d0e31dbed836c"
+          }
+        },
+        {
+          "client_id": "460704268642-openvkunj4hq7olig9sqdeiu484fmoff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnZpne69iRpPLnV1R_3PGbsoS6EudhzUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460704268642-openvkunj4hq7olig9sqdeiu484fmoff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
