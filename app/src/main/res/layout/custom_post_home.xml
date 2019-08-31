@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_post">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/photoAccount"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/brown_rounded" />
+
+            <TextView
+                android:id="@+id/nameAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/photoAccount"
+                android:text="Aip Ariyadi"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"
+                android:layout_below="@id/nameAccount"
+                android:layout_toRightOf="@id/photoAccount"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/locatePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivLocation"
+                android:text="Jl. Kopo Cirangrang"
+                android:textSize="13sp"
+                android:layout_below="@id/nameAccount"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/datePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="17 Mei"
+                android:textStyle="italic"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contentPost"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/photoAccount"
+                android:text="Ada Jalan yang berlubang dan sampai saat ini belum juga dibenarkan. mohon untuk segera dibenarkan."
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/photoPost"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/contentPost"
+                android:src="@drawable/bg_gradient"/>
+
+            <ImageButton
+                android:id="@+id/btnVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_vote_active"
+                android:layout_below="@id/photoPost"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/countVoter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnVote"
+                android:text="121 Dukungan"
+                android:textSize="15sp"
+                android:layout_below="@id/photoPost"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"/>
+
+            <TextView
+                android:id="@+id/detailPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Menunggu tanggapan "
+                android:textSize="13sp"
+                android:layout_below="@id/photoPost"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="7dp"/>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/red_feed"
+                android:layout_toLeftOf="@id/detailPost"
+                android:layout_below="@id/photoPost"
+                android:layout_marginTop="17dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

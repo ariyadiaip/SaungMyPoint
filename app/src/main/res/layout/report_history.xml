@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportFragment"
-    android:background="@drawable/report_activity_main">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/report_activity_history">
 
     <TextView
         android:id="@+id/titleMenu"
@@ -139,7 +137,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Laporan"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/colorGray" />
 
         <TextView
             android:id="@+id/btnRiwayat"
@@ -148,12 +146,12 @@
             android:layout_toRightOf="@id/btnLaporan"
             android:gravity="center"
             android:text="Riwayat"
-            android:textColor="@color/colorGray" />
+            android:textColor="@android:color/white" />
 
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvMyPost"
+        android:id="@+id/rvHistoryReport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

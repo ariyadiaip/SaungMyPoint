@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SentDialogActivity"
     android:background="@color/colorGray">
 
 
@@ -44,19 +43,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Email Terverifikasi"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Laporan Terkirim"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-condensed"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_sucess"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintTop_toBottomOf="@+id/img_sucess" />
 
     <TextView
-        android:id="@+id/tv_dtlEmail"
+        android:id="@+id/tv_dtlSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,7 +60,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Silahkan cek email pemulihan\npassword pada akun email anda."
+        android:text="Laporan akan divalidasi terlebih dahulu oleh Admin. Untuk sementara waktu laporan Anda \nbelum bersifat publik."
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

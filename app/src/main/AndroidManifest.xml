@@ -27,7 +27,8 @@
             android:name=".MainNavActivity"
             android:label="@string/title_activity_main_nav" />
         <activity android:name=".LeaderBoardActivity" />
-        <activity android:name=".DetailReportActivity"></activity>
+        <activity android:name=".DetailReportActivity" />
+        <activity android:name=".AddReportActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leaderboard_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gradient">
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/brown_rounded"
+        android:background="@android:color/transparent"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logo_v2"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"/>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_leaderboard"
+        android:background="@android:color/transparent"/>
+
+</android.support.v7.widget.Toolbar>

@@ -6,4 +6,218 @@
     android:layout_height="match_parent"
     tools:context=".DetailReportActivity">
 
+    <include
+        android:id="@+id/toolbarDetReport"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar_detail_report"/>
+
+    <ImageView
+        android:id="@+id/ivAccount"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDetReport"
+        app:srcCompat="@drawable/brown_rounded" />
+
+    <TextView
+        android:id="@+id/tvnameAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Aip Ariyadi"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/ivAccount"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDetReport" />
+
+    <ImageView
+        android:id="@+id/ivLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/ivAccount"
+        app:layout_constraintTop_toBottomOf="@+id/tvnameAccount" />
+
+    <TextView
+        android:id="@+id/locatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Jl. Kopo Cirangrang"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvnameAccount" />
+
+    <TextView
+        android:id="@+id/datePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="17 Mei"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvnameAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/tvnameAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvnameAccount" />
+
+    <ImageView
+        android:id="@+id/photoPost"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@id/contentPost"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/bg_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAccount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/contentPost"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Ada Jalan yang berlubang dan sampai saat ini belum juga dibenarkan. mohon untuk segera dibenarkan."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoPost" />
+
+    <View
+        android:id="@+id/divStart"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentPost" />
+
+    <ImageButton
+        android:id="@+id/btnVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_vote_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divStart"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/countVoter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="121 Dukungan"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVote"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnVote"
+        app:layout_constraintTop_toTopOf="@+id/btnVote" />
+
+    <TextView
+        android:id="@+id/detailPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Menunggu tanggapan "
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divStart"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/red_feed"
+        app:layout_constraintBottom_toBottomOf="@+id/detailPost"
+        app:layout_constraintEnd_toStartOf="@+id/detailPost"
+        app:layout_constraintTop_toTopOf="@+id/detailPost" />
+
+    <View
+        android:id="@+id/divEnd"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVote"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ImageView
+        android:id="@+id/ivAdmin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divEnd"
+        app:layout_constraintVertical_bias="0.07999998"
+        app:srcCompat="@drawable/brown_rounded" />
+
+    <TextView
+        android:id="@+id/tvBalasanAdmin"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_post"
+        android:padding="9dp"
+        android:text="Terima kasih atas laporannya jangan lupa terus semangat untuk menuju bandung juara"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divEnd"
+        app:layout_constraintVertical_bias="0.18" />
+
 </android.support.constraint.ConstraintLayout>
