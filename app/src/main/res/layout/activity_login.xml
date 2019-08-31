@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ContextLoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
@@ -32,7 +33,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/edt_username"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="text"
         android:paddingLeft="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -152,6 +153,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_dtl1"
         app:layout_constraintVertical_bias="0.39" />
 
+
+
     <Button
         android:id="@+id/btn_guestUser"
         android:layout_width="130dp"
@@ -182,4 +185,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
