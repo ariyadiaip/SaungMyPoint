@@ -1,13 +1,17 @@
 package id.sch.bdg.smkn4.pkk.saung_mypoint;
 
+import android.content.Context;
 import android.content.Intent;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,6 +37,8 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText edtUsername , edtPassword;
     private Button btnLogin , btnLoginWithGoogle;
+    private TextView btnToRegister;
+    private ProgressBar loadingLogin;
 
 
     @Override
@@ -53,17 +59,26 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = (EditText)findViewById(R.id.edt_password);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnLoginWithGoogle = (Button) findViewById(R.id.btn_loginGoogle);
+        btnToRegister = (TextView)findViewById(R.id.btn_toregister);
+        loadingLogin = (ProgressBar)findViewById(R.id.loadingLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signIn();
+                closeKeyboard();
             }
         });
         btnLoginWithGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signInWithGoogle();
+            }
+        });
+        btnToRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this , RegisterActivity.class));
             }
         });
     }
@@ -148,9 +163,12 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        loadingLogin.setVisibility(View.VISIBLE);
+
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
+                    loadingLogin.setVisibility(View.GONE);
                     Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this , MainNavActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -161,9 +179,24 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
+                    loadingLogin.setVisibility(View.GONE);
                     Snackbar.make(findViewById(R.id.ContextLoginActivity),"Terjadi Kesalahan Saat Login" , Snackbar.LENGTH_LONG).show();
                     edtUsername.requestFocus();
                 }
         });
+    }
+
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        loadingLogin.setVisibility(View.GONE);
     }
 }

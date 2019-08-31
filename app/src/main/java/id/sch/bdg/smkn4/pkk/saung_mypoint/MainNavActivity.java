@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -14,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainNavActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private TextView mTextMessage;
+    private TextView logout;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -23,14 +24,11 @@ public class MainNavActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
                     return true;
-//                case R.id.navigation_dashboard:
-//                    mTextMessage.setText(R.string.title_dashboard);
-//                    return true;
-//                case R.id.navigation_notifications:
-//                    mTextMessage.setText(R.string.title_notifications);
-//                    return true;
+                case R.id.navigation_report:
+                    return true;
+                case R.id.navigation_more:
+                    return true;
             }
             return false;
         }
@@ -42,7 +40,15 @@ public class MainNavActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_nav);
         mAuth = FirebaseAuth.getInstance();
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        logout = (TextView) findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(MainNavActivity.this,LoginActivity.class));
+            }
+        });
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
