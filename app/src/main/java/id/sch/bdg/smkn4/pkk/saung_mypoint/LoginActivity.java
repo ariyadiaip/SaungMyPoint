@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -169,11 +171,13 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     loadingLogin.setVisibility(View.GONE);
-                    Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this , MainNavActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    finish();
-                    startActivity(intent);
+                    if (task.isSuccessful()){
+                        Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this , MainNavActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        finish();
+                        startActivity(intent);
+                    }
                 }
         })
                 .addOnFailureListener(new OnFailureListener() {
@@ -198,5 +202,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         loadingLogin.setVisibility(View.GONE);
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user!=null){
+            Intent intent = new Intent(LoginActivity.this , MainNavActivity.class);
+            finish();
+            startActivity(intent);
+        }
+
     }
 }

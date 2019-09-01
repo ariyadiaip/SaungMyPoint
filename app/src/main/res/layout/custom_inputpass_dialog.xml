@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_post">
+
+    <TextView
+        android:id="@+id/titlePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Password"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/subtitlePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlePass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Masukkan Password Untuk Melanjutkan."
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_below="@id/subtitlePass"
+        android:layout_centerHorizontal="true"
+        android:layout_width="190dp"
+        android:hint="aaaa"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_input"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"/>
+
+    <RelativeLayout
+        android:id="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnBatal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/ColorRed"
+            android:textSize="15sp"
+            android:text="Batal"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorMyBlue"
+            android:layout_toRightOf="@id/btnBatal"
+            android:textSize="15sp"
+            android:text="Submit"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
