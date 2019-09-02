@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@+id/btnBackPrivacy"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
