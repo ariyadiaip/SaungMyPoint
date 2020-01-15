@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartedActivity"
-    android:background="@drawable/bg_started_screen">
+    android:background="@drawable/bg_started_screen"
+    tools:context=".StartedActivity">
 
     <ImageView
         android:id="@+id/logov1"
@@ -77,8 +77,12 @@
 
     <Button
         android:id="@+id/btn_getStart1"
-        android:layout_width="330dp"
-        android:layout_height="70dp"
+        android:layout_width="236dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/btn_getstarted"
         android:text="Get Started"
         android:textColor="@android:color/white"
@@ -86,23 +90,9 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mottoApp"
+        app:layout_constraintVertical_bias="0.929" />
 
-    <Button
-        android:id="@+id/btn_getStart2"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/btn_getstarted2"
-        android:text=">"
-        android:textSize="50sp"
-        android:textStyle="normal"
-        android:textColor="@android:color/white"
-        android:fontFamily="monospace"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_getStart1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,6 +27,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:18.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
     testImplementation 'junit:junit:4.12'
     //library rycycle view
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
@@ -37,6 +38,13 @@ dependencies {
     //support Design
     implementation 'com.google.android.material:material:1.0.0'
 
+    //app intro
+    implementation 'com.github.AppIntro:AppIntro:5.1.0'
+
+    //gambar
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 
 
     androidTestImplementation 'androidx.test:runner:1.1.0'

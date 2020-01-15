@@ -109,7 +109,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     loading.setVisibility(View.GONE);
-                    Toast.makeText(RegisterActivity.this, "Login Disini", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegisterActivity.this , LoginActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     finish();

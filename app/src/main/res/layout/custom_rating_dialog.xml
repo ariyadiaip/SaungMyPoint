@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beri Rating!"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/ivStar"
+        android:layout_marginTop="23dp"/>
+
+    <TextView
+        android:id="@+id/tvDetailRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_below="@id/ivStar"
+        android:text="@string/dialogRate"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:id="@+id/btnBatal"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/ColorRed"
+        android:layout_marginLeft="160dp"
+        android:layout_below="@id/tvDetailRate"
+        android:textSize="15sp"
+        android:text="Batal"/>
+
+    <Button
+        android:id="@+id/btnLanjut"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/colorMyBlue"
+        android:layout_toRightOf="@id/btnBatal"
+        android:layout_below="@id/tvDetailRate"
+        android:textSize="15sp"
+        android:text="Lanjut"/>
+</RelativeLayout>
